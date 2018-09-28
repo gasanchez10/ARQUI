@@ -1,0 +1,563 @@
+Analysis & Synthesis report for BB_SYSTEM
+Thu Sep 27 20:14:46 2018
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |BB_SYSTEM
+ 12. Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0
+ 13. Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0
+ 14. Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u0
+ 15. Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u1
+ 16. Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u2
+ 17. Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u3
+ 18. Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegFIXED:SC_RegFIXED_u0
+ 19. Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegFIXED:SC_RegFIXED_u1
+ 20. Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegSHIFTER:SC_RegSHIFTER_u0
+ 21. Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|CC_DECODER:CC_DECODER_u0
+ 22. Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|CC_MUXX:CC_MUXX_u0
+ 23. Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|CC_MUXX:CC_MUXX_u1
+ 24. Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|CC_ALU:CC_ALU_u0
+ 25. Port Connectivity Checks: "WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0"
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Sep 27 20:14:46 2018       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; BB_SYSTEM                                   ;
+; Top-level Entity Name              ; BB_SYSTEM                                   ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 10                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE22F17C6       ;                    ;
+; Top-level entity name                                            ; BB_SYSTEM          ; BB_SYSTEM          ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation              ; 4                  ;                    ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                    ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
+; rtl/uDataPath.v                  ; yes             ; User Verilog HDL File  ; C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/uDataPath.v     ;         ;
+; rtl/SC_RegSHIFTER.v              ; yes             ; User Verilog HDL File  ; C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/SC_RegSHIFTER.v ;         ;
+; rtl/SC_RegGENERAL.v              ; yes             ; User Verilog HDL File  ; C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/SC_RegGENERAL.v ;         ;
+; rtl/SC_RegFIXED.v                ; yes             ; User Verilog HDL File  ; C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/SC_RegFIXED.v   ;         ;
+; rtl/CC_MUXX.v                    ; yes             ; User Verilog HDL File  ; C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/CC_MUXX.v       ;         ;
+; rtl/CC_DECODER.v                 ; yes             ; User Verilog HDL File  ; C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/CC_DECODER.v    ;         ;
+; rtl/CC_ALU.v                     ; yes             ; User Verilog HDL File  ; C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/CC_ALU.v        ;         ;
+; BB_SYSTEM.v                      ; yes             ; User Verilog HDL File  ; C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/BB_SYSTEM.v         ;         ;
+; rtl/WB_SYSTEM.v                  ; yes             ; User Verilog HDL File  ; C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/WB_SYSTEM.v     ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                          ;
++---------------------------------------------+----------------------------------------+
+; Resource                                    ; Usage                                  ;
++---------------------------------------------+----------------------------------------+
+;                                             ;                                        ;
+; Total combinational functions               ; 0                                      ;
+; Logic element usage by number of LUT inputs ;                                        ;
+;     -- 4 input functions                    ; 0                                      ;
+;     -- 3 input functions                    ; 0                                      ;
+;     -- <=2 input functions                  ; 0                                      ;
+;                                             ;                                        ;
+; Logic elements by mode                      ;                                        ;
+;     -- normal mode                          ; 0                                      ;
+;     -- arithmetic mode                      ; 0                                      ;
+;                                             ;                                        ;
+; Total registers                             ; 0                                      ;
+;     -- Dedicated logic registers            ; 0                                      ;
+;     -- I/O registers                        ; 0                                      ;
+;                                             ;                                        ;
+; I/O pins                                    ; 10                                     ;
+;                                             ;                                        ;
+; Embedded Multiplier 9-bit elements          ; 0                                      ;
+;                                             ;                                        ;
+; Maximum fan-out node                        ; BB_SYSTEM_DataBUSDisplay_Out[0]~output ;
+; Maximum fan-out                             ; 1                                      ;
+; Total fan-out                               ; 10                                     ;
+; Average fan-out                             ; 0.50                                   ;
++---------------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; |BB_SYSTEM                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |BB_SYSTEM          ; BB_SYSTEM   ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                   ;
++--------------------------------------------------------------------------------------------------------+---------------------------------------------+
+; Register name                                                                                          ; Reason for Removal                          ;
++--------------------------------------------------------------------------------------------------------+---------------------------------------------+
+; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u3|RegGENERAL_Register[0..7] ; Stuck at GND due to stuck port clock_enable ;
+; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u2|RegGENERAL_Register[0..7] ; Lost fanout                                 ;
+; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u1|RegGENERAL_Register[0..7] ; Lost fanout                                 ;
+; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegSHIFTER:SC_RegSHIFTER_u0|RegSHIFTER_Register[0..7] ; Lost fanout                                 ;
+; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegFIXED:SC_RegFIXED_u1|RegFIXED_Register[0..7]       ; Lost fanout                                 ;
+; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegFIXED:SC_RegFIXED_u0|RegFIXED_Register[0..7]       ; Lost fanout                                 ;
+; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u0|RegGENERAL_Register[0..7] ; Lost fanout                                 ;
+; Total Number of Removed Registers = 56                                                                 ;                                             ;
++--------------------------------------------------------------------------------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                                                                 ;
++-----------------------------------------------------------------------------------------------------+--------------------------------+------------------------------------------------------------------------------------------------------+
+; Register name                                                                                       ; Reason for Removal             ; Registers Removed due to This Register                                                               ;
++-----------------------------------------------------------------------------------------------------+--------------------------------+------------------------------------------------------------------------------------------------------+
+; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u3|RegGENERAL_Register[0] ; Stuck at GND                   ; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegSHIFTER:SC_RegSHIFTER_u0|RegSHIFTER_Register[0], ;
+;                                                                                                     ; due to stuck port clock_enable ; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u0|RegGENERAL_Register[0]  ;
+; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u3|RegGENERAL_Register[7] ; Stuck at GND                   ; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegSHIFTER:SC_RegSHIFTER_u0|RegSHIFTER_Register[7], ;
+;                                                                                                     ; due to stuck port clock_enable ; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u0|RegGENERAL_Register[7]  ;
+; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u3|RegGENERAL_Register[6] ; Stuck at GND                   ; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegSHIFTER:SC_RegSHIFTER_u0|RegSHIFTER_Register[6], ;
+;                                                                                                     ; due to stuck port clock_enable ; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u0|RegGENERAL_Register[6]  ;
+; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u3|RegGENERAL_Register[5] ; Stuck at GND                   ; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegSHIFTER:SC_RegSHIFTER_u0|RegSHIFTER_Register[5], ;
+;                                                                                                     ; due to stuck port clock_enable ; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u0|RegGENERAL_Register[5]  ;
+; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u3|RegGENERAL_Register[4] ; Stuck at GND                   ; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegSHIFTER:SC_RegSHIFTER_u0|RegSHIFTER_Register[4], ;
+;                                                                                                     ; due to stuck port clock_enable ; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u0|RegGENERAL_Register[4]  ;
+; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u3|RegGENERAL_Register[3] ; Stuck at GND                   ; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegSHIFTER:SC_RegSHIFTER_u0|RegSHIFTER_Register[3], ;
+;                                                                                                     ; due to stuck port clock_enable ; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u0|RegGENERAL_Register[3]  ;
+; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u3|RegGENERAL_Register[2] ; Stuck at GND                   ; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegSHIFTER:SC_RegSHIFTER_u0|RegSHIFTER_Register[2], ;
+;                                                                                                     ; due to stuck port clock_enable ; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u0|RegGENERAL_Register[2]  ;
+; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u3|RegGENERAL_Register[1] ; Stuck at GND                   ; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegSHIFTER:SC_RegSHIFTER_u0|RegSHIFTER_Register[1], ;
+;                                                                                                     ; due to stuck port clock_enable ; WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u0|RegGENERAL_Register[1]  ;
++-----------------------------------------------------------------------------------------------------+--------------------------------+------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |BB_SYSTEM ;
++--------------------------------+----------+-------------------------------+
+; Parameter Name                 ; Value    ; Type                          ;
++--------------------------------+----------+-------------------------------+
+; DATAWIDTH_BUS                  ; 8        ; Signed Integer                ;
+; DATAWIDTH_REGSHIFTER_SELECTION ; 2        ; Signed Integer                ;
+; DATAWIDTH_DECODER_SELECTION    ; 3        ; Signed Integer                ;
+; DATAWIDTH_ALU_SELECTION        ; 4        ; Signed Integer                ;
+; DATA_REGFIXED_INIT_0           ; 00001001 ; Unsigned Binary               ;
+; DATA_REGFIXED_INIT_1           ; 00001111 ; Unsigned Binary               ;
+; DATAWIDTH_DECODER_OUT          ; 4        ; Signed Integer                ;
+; DATAWIDTH_MUX_SELECTION        ; 3        ; Signed Integer                ;
++--------------------------------+----------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0 ;
++--------------------------------+----------+-------------------------+
+; Parameter Name                 ; Value    ; Type                    ;
++--------------------------------+----------+-------------------------+
+; DATAWIDTH_BUS                  ; 8        ; Signed Integer          ;
+; DATAWIDTH_REGSHIFTER_SELECTION ; 2        ; Signed Integer          ;
+; DATAWIDTH_DECODER_SELECTION    ; 3        ; Signed Integer          ;
+; DATAWIDTH_ALU_SELECTION        ; 4        ; Signed Integer          ;
+; DATA_REGFIXED_INIT_0           ; 00001001 ; Unsigned Binary         ;
+; DATA_REGFIXED_INIT_1           ; 00001111 ; Unsigned Binary         ;
+; DATAWIDTH_DECODER_OUT          ; 4        ; Signed Integer          ;
+; DATAWIDTH_MUX_SELECTION        ; 3        ; Signed Integer          ;
++--------------------------------+----------+-------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0 ;
++--------------------------------+----------+------------------------------------------------+
+; Parameter Name                 ; Value    ; Type                                           ;
++--------------------------------+----------+------------------------------------------------+
+; DATAWIDTH_BUS                  ; 8        ; Signed Integer                                 ;
+; DATAWIDTH_REGSHIFTER_SELECTION ; 2        ; Signed Integer                                 ;
+; DATAWIDTH_DECODER_SELECTION    ; 3        ; Signed Integer                                 ;
+; DATAWIDTH_ALU_SELECTION        ; 4        ; Signed Integer                                 ;
+; DATA_REGFIXED_INIT_0           ; 00001001 ; Unsigned Binary                                ;
+; DATA_REGFIXED_INIT_1           ; 00001111 ; Unsigned Binary                                ;
+; DATAWIDTH_DECODER_OUT          ; 4        ; Signed Integer                                 ;
+; DATAWIDTH_MUX_SELECTION        ; 3        ; Signed Integer                                 ;
++--------------------------------+----------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u0 ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                             ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; DATAWIDTH_BUS  ; 8     ; Signed Integer                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u1 ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                             ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; DATAWIDTH_BUS  ; 8     ; Signed Integer                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u2 ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                             ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; DATAWIDTH_BUS  ; 8     ; Signed Integer                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u3 ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                             ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; DATAWIDTH_BUS  ; 8     ; Signed Integer                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegFIXED:SC_RegFIXED_u0 ;
++--------------------+----------+---------------------------------------------------------------------------------------+
+; Parameter Name     ; Value    ; Type                                                                                  ;
++--------------------+----------+---------------------------------------------------------------------------------------+
+; DATAWIDTH_BUS      ; 8        ; Signed Integer                                                                        ;
+; DATA_REGFIXED_INIT ; 00001001 ; Unsigned Binary                                                                       ;
++--------------------+----------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegFIXED:SC_RegFIXED_u1 ;
++--------------------+----------+---------------------------------------------------------------------------------------+
+; Parameter Name     ; Value    ; Type                                                                                  ;
++--------------------+----------+---------------------------------------------------------------------------------------+
+; DATAWIDTH_BUS      ; 8        ; Signed Integer                                                                        ;
+; DATA_REGFIXED_INIT ; 00001111 ; Unsigned Binary                                                                       ;
++--------------------+----------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegSHIFTER:SC_RegSHIFTER_u0 ;
++--------------------------------+-------+----------------------------------------------------------------------------------+
+; Parameter Name                 ; Value ; Type                                                                             ;
++--------------------------------+-------+----------------------------------------------------------------------------------+
+; DATAWIDTH_BUS                  ; 8     ; Signed Integer                                                                   ;
+; DATAWIDTH_REGSHIFTER_SELECTION ; 2     ; Signed Integer                                                                   ;
++--------------------------------+-------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|CC_DECODER:CC_DECODER_u0 ;
++-----------------------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name              ; Value ; Type                                                                          ;
++-----------------------------+-------+-------------------------------------------------------------------------------+
+; DATAWIDTH_DECODER_SELECTION ; 3     ; Signed Integer                                                                ;
+; DATAWIDTH_DECODER_OUT       ; 4     ; Signed Integer                                                                ;
++-----------------------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|CC_MUXX:CC_MUXX_u0 ;
++-------------------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name          ; Value ; Type                                                                        ;
++-------------------------+-------+-----------------------------------------------------------------------------+
+; DATAWIDTH_MUX_SELECTION ; 3     ; Signed Integer                                                              ;
+; DATAWIDTH_BUS           ; 8     ; Signed Integer                                                              ;
++-------------------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|CC_MUXX:CC_MUXX_u1 ;
++-------------------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name          ; Value ; Type                                                                        ;
++-------------------------+-------+-----------------------------------------------------------------------------+
+; DATAWIDTH_MUX_SELECTION ; 3     ; Signed Integer                                                              ;
+; DATAWIDTH_BUS           ; 8     ; Signed Integer                                                              ;
++-------------------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|CC_ALU:CC_ALU_u0 ;
++-------------------------+-------+---------------------------------------------------------------------------+
+; Parameter Name          ; Value ; Type                                                                      ;
++-------------------------+-------+---------------------------------------------------------------------------+
+; DATAWIDTH_BUS           ; 8     ; Signed Integer                                                            ;
+; DATAWIDTH_ALU_SELECTION ; 4     ; Signed Integer                                                            ;
++-------------------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0"                                                          ;
++--------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                     ; Type   ; Severity ; Details                                                                             ;
++--------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; uDataPath_Overflow_InLow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; uDataPath_Carry_InLow    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; uDataPath_Negative_InLow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; uDataPath_Zero_InLow     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 10                          ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Thu Sep 27 20:14:29 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BB_SYSTEM -c BB_SYSTEM
+Info (20032): Parallel compilation is enabled and will use up to 4 processors
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/udatapath.v
+    Info (12023): Found entity 1: uDataPath File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/uDataPath.v Line: 27
+Warning (12019): Can't analyze file -- file rtl/SC_STATEMACHINE.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_regshifter.v
+    Info (12023): Found entity 1: SC_RegSHIFTER File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/SC_RegSHIFTER.v Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_reggeneral.v
+    Info (12023): Found entity 1: SC_RegGENERAL File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/SC_RegGENERAL.v Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/sc_regfixed.v
+    Info (12023): Found entity 1: SC_RegFIXED File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/SC_RegFIXED.v Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/cc_muxx.v
+    Info (12023): Found entity 1: CC_MUXX File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/CC_MUXX.v Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/cc_decoder.v
+    Info (12023): Found entity 1: CC_DECODER File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/CC_DECODER.v Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/cc_alu.v
+    Info (12023): Found entity 1: CC_ALU File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/CC_ALU.v Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file bb_system.v
+    Info (12023): Found entity 1: BB_SYSTEM File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/BB_SYSTEM.v Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/wb_system.v
+    Info (12023): Found entity 1: WB_SYSTEM File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/WB_SYSTEM.v Line: 27
+Info (12127): Elaborating entity "BB_SYSTEM" for the top level hierarchy
+Info (12128): Elaborating entity "WB_SYSTEM" for hierarchy "WB_SYSTEM:WB_SYSTEM_u0" File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/BB_SYSTEM.v Line: 70
+Info (12128): Elaborating entity "uDataPath" for hierarchy "WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0" File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/WB_SYSTEM.v Line: 85
+Info (12128): Elaborating entity "SC_RegGENERAL" for hierarchy "WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegGENERAL:SC_RegGENERAL_u0" File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/uDataPath.v Line: 110
+Info (12128): Elaborating entity "SC_RegFIXED" for hierarchy "WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegFIXED:SC_RegFIXED_u0" File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/uDataPath.v Line: 144
+Info (12128): Elaborating entity "SC_RegFIXED" for hierarchy "WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegFIXED:SC_RegFIXED_u1" File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/uDataPath.v Line: 150
+Info (12128): Elaborating entity "SC_RegSHIFTER" for hierarchy "WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|SC_RegSHIFTER:SC_RegSHIFTER_u0" File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/uDataPath.v Line: 163
+Info (12128): Elaborating entity "CC_DECODER" for hierarchy "WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|CC_DECODER:CC_DECODER_u0" File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/uDataPath.v Line: 173
+Info (12128): Elaborating entity "CC_MUXX" for hierarchy "WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|CC_MUXX:CC_MUXX_u0" File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/uDataPath.v Line: 192
+Info (12128): Elaborating entity "CC_ALU" for hierarchy "WB_SYSTEM:WB_SYSTEM_u0|uDataPath:uDataPath_u0|CC_ALU:CC_ALU_u0" File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/uDataPath.v Line: 223
+Warning (10036): Verilog HDL or VHDL warning at CC_ALU.v(58): object "addition0" assigned a value but never read File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/CC_ALU.v Line: 58
+Warning (10036): Verilog HDL or VHDL warning at CC_ALU.v(59): object "addition1" assigned a value but never read File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/rtl/CC_ALU.v Line: 59
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "BB_SYSTEM_DataBUSDisplay_Out[0]" is stuck at GND File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/BB_SYSTEM.v Line: 55
+    Warning (13410): Pin "BB_SYSTEM_DataBUSDisplay_Out[1]" is stuck at GND File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/BB_SYSTEM.v Line: 55
+    Warning (13410): Pin "BB_SYSTEM_DataBUSDisplay_Out[2]" is stuck at GND File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/BB_SYSTEM.v Line: 55
+    Warning (13410): Pin "BB_SYSTEM_DataBUSDisplay_Out[3]" is stuck at GND File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/BB_SYSTEM.v Line: 55
+    Warning (13410): Pin "BB_SYSTEM_DataBUSDisplay_Out[4]" is stuck at GND File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/BB_SYSTEM.v Line: 55
+    Warning (13410): Pin "BB_SYSTEM_DataBUSDisplay_Out[5]" is stuck at GND File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/BB_SYSTEM.v Line: 55
+    Warning (13410): Pin "BB_SYSTEM_DataBUSDisplay_Out[6]" is stuck at GND File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/BB_SYSTEM.v Line: 55
+    Warning (13410): Pin "BB_SYSTEM_DataBUSDisplay_Out[7]" is stuck at GND File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/BB_SYSTEM.v Line: 55
+Info (17049): 48 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "BB_SYSTEM_CLOCK_50" File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/BB_SYSTEM.v Line: 56
+    Warning (15610): No output dependent on input pin "BB_SYSTEM_Reset_InHigh" File: C:/Users/German/Downloads/PRJ0_uDataPath_1/PRJ0_uDataPath_1/BB_SYSTEM.v Line: 57
+Info (21057): Implemented 10 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 8 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 592 megabytes
+    Info: Processing ended: Thu Sep 27 20:14:46 2018
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:31
+
+

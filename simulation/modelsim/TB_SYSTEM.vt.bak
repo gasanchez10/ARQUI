@@ -1,0 +1,93 @@
+// Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "08/22/2016 14:40:49"
+                                                                                
+// Verilog Test Bench template for design : system
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ns/ 1 ns
+module system_tst();
+// constants                                           
+// ============================================
+// Parameter ( may differ for physical synthesis)
+// ============================================
+	// general purpose registers
+	reg eachvec;
+
+	parameter DATAWIDTH_BUS = 8 ;
+	integer ii=0;
+	
+	// test vector input registers
+	// ============================================
+// INTERNAL WIRE AND REG DECLARATIONS
+// ============================================
+	reg [DATAWIDTH_BUS-1:0] TB_System_DataBUS_In;
+	reg TB_System_Selector_In;
+	// wires                                               
+	wire [DATAWIDTH_BUS-1:0] TB_System_DataBUS_Out;
+
+	// assign statements (if any)                          
+	system system_u0 (
+	// port map - connection between master ports and signals/registers   
+		.System_DataBUS_In(TB_System_DataBUS_In),
+		.System_Selector_In(TB_System_Selector_In),
+		.System_DataBUS_Out(TB_System_DataBUS_Out)
+	);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+	#0 	TB_System_DataBUS_In <= 8'b01001111; TB_System_Selector_In <= 0; 
+	#20 	TB_System_DataBUS_In <= 8'b01101111; TB_System_Selector_In <= 0; 
+	#20 	TB_System_DataBUS_In <= 8'b11001111; TB_System_Selector_In <= 0; 
+	#20 	TB_System_DataBUS_In <= 8'b01111111; TB_System_Selector_In <= 1; 
+	#20 	TB_System_DataBUS_In <= 8'b10001111; TB_System_Selector_In <= 1; 
+	#20 	TB_System_DataBUS_In <= 8'b10011111; TB_System_Selector_In <= 0; 
+   for (ii=0; ii<25; ii=ii+1)
+		begin
+				if (ii <= 12)
+					TB_System_Selector_In <= 0; 
+				else 
+					TB_System_Selector_In <= 1; 
+				TB_System_DataBUS_In <= $random;
+				$display("%1d: Tiempo: %2d. IN: %2d; OUT: %2d", ii, $time, TB_System_DataBUS_In, TB_System_DataBUS_Out );
+          #10;
+        end
+	
+@eachvec;
+$finish;                                              
+// --> end                                             
+end                                                    
+endmodule
+

@@ -1,0 +1,73 @@
+//##########################################################################
+//######					G0B1T HDL EXAMPLES											####
+//######	Fredy Enrique Segura-Quijano fsegura@uniandes.edu.co				####   
+//######																						####   
+//######				MODIFICADO: Agosto de 2017 - FES								####   
+//##########################################################################
+//# G0B1T
+//# Copyright (C) 2014 Bogotá, Colombia
+//# 
+//# This program is free software: you can redistribute it and/or modify
+//# it under the terms of the GNU General Public License as published by
+//# the Free Software Foundation, version 3 of the License.
+//#
+//# This program is distributed in the hope that it will be useful,
+//# but WITHOUT ANY WARRANTY; without even the implied warranty of
+//# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//# GNU General Public License for more details.
+//#
+//# You should have received a copy of the GNU General Public License
+//# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//#/
+//###########################################################################
+
+//=======================================================
+//  MODULE Definition
+//=======================================================
+module Bin22Gray #(parameter DATAWIDTH_BUS=8)(
+//////////// OUTPUTS //////////
+	Bin22Gray_DataBUS_Out,
+//////////// INPUTS //////////
+	Bin22Gray_DataBUS_In,
+	Bin22Gray_Selector_In
+);
+//=======================================================
+//  PARAMETER declarations
+//=======================================================
+
+//=======================================================
+//  PORT declarations
+//=======================================================
+	output	[DATAWIDTH_BUS-1:0] Bin22Gray_DataBUS_Out;
+
+	input 	[DATAWIDTH_BUS-1:0] Bin22Gray_DataBUS_In;
+	input		Bin22Gray_Selector_In;
+//=======================================================
+//  REG/WIRE declarations
+//=======================================================
+	wire [DATAWIDTH_BUS-1:0] Bin2Gray_DataBUS_wire;
+	wire [DATAWIDTH_BUS-1:0] Gray2Bin_DataBUS_wire;
+
+//=======================================================
+//  Structural coding
+//=======================================================
+Bin2Gray #(.DATAWIDTH_BUS(DATAWIDTH_BUS)) Bin2Gray_u0 (
+// port map - connection between master ports and signals/registers   
+	.Bin2Gray_DataBUS_Out(Bin2Gray_DataBUS_wire),
+	.Bin2Gray_DataBUS_In(Bin22Gray_DataBUS_In)
+);
+Gray2Bin #(.DATAWIDTH_BUS(DATAWIDTH_BUS)) Gray2Bin_u0 (
+// port map - connection between master ports and signals/registers   
+	.Gray2Bin_DataBUS_Out(Gray2Bin_DataBUS_wire),
+	.Gray2Bin_DataBUS_In(Bin22Gray_DataBUS_In)
+);
+Selector #(.DATAWIDTH_BUS(DATAWIDTH_BUS)) Selector_u0 (
+// port map - connection between master ports and signals/registers   
+	.Selector_DataBus_Out(Bin22Gray_DataBUS_Out),
+	.Selector_Selector_In(Bin22Gray_Selector_In),
+	.Selector_DataBusA_In(Gray2Bin_DataBUS_wire),
+	.Selector_DataBusB_In(Bin2Gray_DataBUS_wire)
+);
+
+endmodule
+

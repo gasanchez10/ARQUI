@@ -1,0 +1,259 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
+
+// DATE "09/27/2018 20:15:14"
+
+// 
+// Device: Altera EP4CE22F17C6 Package FBGA256
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module BB_SYSTEM (
+	BB_SYSTEM_DataBUSDisplay_Out,
+	BB_SYSTEM_CLOCK_50,
+	BB_SYSTEM_Reset_InHigh);
+output 	[7:0] BB_SYSTEM_DataBUSDisplay_Out;
+input 	BB_SYSTEM_CLOCK_50;
+input 	BB_SYSTEM_Reset_InHigh;
+
+// Design Ports Information
+// BB_SYSTEM_DataBUSDisplay_Out[0]	=>  Location: PIN_A15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
+// BB_SYSTEM_DataBUSDisplay_Out[1]	=>  Location: PIN_A13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
+// BB_SYSTEM_DataBUSDisplay_Out[2]	=>  Location: PIN_B13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
+// BB_SYSTEM_DataBUSDisplay_Out[3]	=>  Location: PIN_A11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
+// BB_SYSTEM_DataBUSDisplay_Out[4]	=>  Location: PIN_D1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
+// BB_SYSTEM_DataBUSDisplay_Out[5]	=>  Location: PIN_F3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
+// BB_SYSTEM_DataBUSDisplay_Out[6]	=>  Location: PIN_B1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
+// BB_SYSTEM_DataBUSDisplay_Out[7]	=>  Location: PIN_L3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
+// BB_SYSTEM_CLOCK_50	=>  Location: PIN_R8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// BB_SYSTEM_Reset_InHigh	=>  Location: PIN_J15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("BB_SYSTEM_min_1200mv_0c_v_fast.sdo");
+// synopsys translate_on
+
+wire \BB_SYSTEM_CLOCK_50~input_o ;
+wire \BB_SYSTEM_Reset_InHigh~input_o ;
+wire \BB_SYSTEM_DataBUSDisplay_Out[0]~output_o ;
+wire \BB_SYSTEM_DataBUSDisplay_Out[1]~output_o ;
+wire \BB_SYSTEM_DataBUSDisplay_Out[2]~output_o ;
+wire \BB_SYSTEM_DataBUSDisplay_Out[3]~output_o ;
+wire \BB_SYSTEM_DataBUSDisplay_Out[4]~output_o ;
+wire \BB_SYSTEM_DataBUSDisplay_Out[5]~output_o ;
+wire \BB_SYSTEM_DataBUSDisplay_Out[6]~output_o ;
+wire \BB_SYSTEM_DataBUSDisplay_Out[7]~output_o ;
+
+
+hard_block auto_generated_inst(
+	.devpor(devpor),
+	.devclrn(devclrn),
+	.devoe(devoe));
+
+// Location: IOOBUF_X38_Y34_N16
+cycloneive_io_obuf \BB_SYSTEM_DataBUSDisplay_Out[0]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\BB_SYSTEM_DataBUSDisplay_Out[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \BB_SYSTEM_DataBUSDisplay_Out[0]~output .bus_hold = "false";
+defparam \BB_SYSTEM_DataBUSDisplay_Out[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X49_Y34_N2
+cycloneive_io_obuf \BB_SYSTEM_DataBUSDisplay_Out[1]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\BB_SYSTEM_DataBUSDisplay_Out[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \BB_SYSTEM_DataBUSDisplay_Out[1]~output .bus_hold = "false";
+defparam \BB_SYSTEM_DataBUSDisplay_Out[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X49_Y34_N9
+cycloneive_io_obuf \BB_SYSTEM_DataBUSDisplay_Out[2]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\BB_SYSTEM_DataBUSDisplay_Out[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \BB_SYSTEM_DataBUSDisplay_Out[2]~output .bus_hold = "false";
+defparam \BB_SYSTEM_DataBUSDisplay_Out[2]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X40_Y34_N2
+cycloneive_io_obuf \BB_SYSTEM_DataBUSDisplay_Out[3]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\BB_SYSTEM_DataBUSDisplay_Out[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \BB_SYSTEM_DataBUSDisplay_Out[3]~output .bus_hold = "false";
+defparam \BB_SYSTEM_DataBUSDisplay_Out[3]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y25_N9
+cycloneive_io_obuf \BB_SYSTEM_DataBUSDisplay_Out[4]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\BB_SYSTEM_DataBUSDisplay_Out[4]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \BB_SYSTEM_DataBUSDisplay_Out[4]~output .bus_hold = "false";
+defparam \BB_SYSTEM_DataBUSDisplay_Out[4]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y26_N16
+cycloneive_io_obuf \BB_SYSTEM_DataBUSDisplay_Out[5]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\BB_SYSTEM_DataBUSDisplay_Out[5]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \BB_SYSTEM_DataBUSDisplay_Out[5]~output .bus_hold = "false";
+defparam \BB_SYSTEM_DataBUSDisplay_Out[5]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y28_N9
+cycloneive_io_obuf \BB_SYSTEM_DataBUSDisplay_Out[6]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\BB_SYSTEM_DataBUSDisplay_Out[6]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \BB_SYSTEM_DataBUSDisplay_Out[6]~output .bus_hold = "false";
+defparam \BB_SYSTEM_DataBUSDisplay_Out[6]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y10_N23
+cycloneive_io_obuf \BB_SYSTEM_DataBUSDisplay_Out[7]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\BB_SYSTEM_DataBUSDisplay_Out[7]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \BB_SYSTEM_DataBUSDisplay_Out[7]~output .bus_hold = "false";
+defparam \BB_SYSTEM_DataBUSDisplay_Out[7]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X27_Y0_N22
+cycloneive_io_ibuf \BB_SYSTEM_CLOCK_50~input (
+	.i(BB_SYSTEM_CLOCK_50),
+	.ibar(gnd),
+	.o(\BB_SYSTEM_CLOCK_50~input_o ));
+// synopsys translate_off
+defparam \BB_SYSTEM_CLOCK_50~input .bus_hold = "false";
+defparam \BB_SYSTEM_CLOCK_50~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X53_Y14_N1
+cycloneive_io_ibuf \BB_SYSTEM_Reset_InHigh~input (
+	.i(BB_SYSTEM_Reset_InHigh),
+	.ibar(gnd),
+	.o(\BB_SYSTEM_Reset_InHigh~input_o ));
+// synopsys translate_off
+defparam \BB_SYSTEM_Reset_InHigh~input .bus_hold = "false";
+defparam \BB_SYSTEM_Reset_InHigh~input .simulate_z_as = "z";
+// synopsys translate_on
+
+assign BB_SYSTEM_DataBUSDisplay_Out[0] = \BB_SYSTEM_DataBUSDisplay_Out[0]~output_o ;
+
+assign BB_SYSTEM_DataBUSDisplay_Out[1] = \BB_SYSTEM_DataBUSDisplay_Out[1]~output_o ;
+
+assign BB_SYSTEM_DataBUSDisplay_Out[2] = \BB_SYSTEM_DataBUSDisplay_Out[2]~output_o ;
+
+assign BB_SYSTEM_DataBUSDisplay_Out[3] = \BB_SYSTEM_DataBUSDisplay_Out[3]~output_o ;
+
+assign BB_SYSTEM_DataBUSDisplay_Out[4] = \BB_SYSTEM_DataBUSDisplay_Out[4]~output_o ;
+
+assign BB_SYSTEM_DataBUSDisplay_Out[5] = \BB_SYSTEM_DataBUSDisplay_Out[5]~output_o ;
+
+assign BB_SYSTEM_DataBUSDisplay_Out[6] = \BB_SYSTEM_DataBUSDisplay_Out[6]~output_o ;
+
+assign BB_SYSTEM_DataBUSDisplay_Out[7] = \BB_SYSTEM_DataBUSDisplay_Out[7]~output_o ;
+
+endmodule
+
+module hard_block (
+
+	devpor,
+	devclrn,
+	devoe);
+
+// Design Ports Information
+// ~ALTERA_ASDO_DATA1~	=>  Location: PIN_C1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// ~ALTERA_FLASH_nCE_nCSO~	=>  Location: PIN_D2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// ~ALTERA_DCLK~	=>  Location: PIN_H1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// ~ALTERA_DATA0~	=>  Location: PIN_H2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// ~ALTERA_nCEO~	=>  Location: PIN_F16,	 I/O Standard: 2.5 V,	 Current Strength: 8mA
+
+input 	devpor;
+input 	devclrn;
+input 	devoe;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+wire \~ALTERA_ASDO_DATA1~~padout ;
+wire \~ALTERA_FLASH_nCE_nCSO~~padout ;
+wire \~ALTERA_DATA0~~padout ;
+wire \~ALTERA_ASDO_DATA1~~ibuf_o ;
+wire \~ALTERA_FLASH_nCE_nCSO~~ibuf_o ;
+wire \~ALTERA_DATA0~~ibuf_o ;
+
+
+endmodule

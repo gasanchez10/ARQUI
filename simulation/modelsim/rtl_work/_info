@@ -1,0 +1,263 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/simulation/modelsim
+vBB_SYSTEM
+Z1 !s110 1519735175
+!i10b 1
+!s100 nQ9`8W=]IfoL1S4A]C72[3
+IgW>FojmL`mEIG<HfakN001
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1519735134
+8/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/BB_SYSTEM.v
+F/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/BB_SYSTEM.v
+Z3 L0 27
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1519735175.000000
+!s107 /media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/BB_SYSTEM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1|/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/BB_SYSTEM.v|
+!i113 1
+Z6 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1
+Z7 tCvgOpt 0
+n@b@b_@s@y@s@t@e@m
+vCC_ALU
+R1
+!i10b 1
+!s100 5Jn=zjAkgoDkVS14EDHY92
+IN`1bkzFGP3[`d5EclTX]>2
+R2
+R0
+Z8 w1519156420
+8/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/CC_ALU.v
+F/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/CC_ALU.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/CC_ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl|/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/CC_ALU.v|
+!i113 1
+R6
+Z9 !s92 -vlog01compat -work work +incdir+/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl
+R7
+n@c@c_@a@l@u
+vCC_DECODER
+R1
+!i10b 1
+!s100 T>5IoHZ1FmXEczcLfE7YS1
+I<Dk:>C28fCzbi:CVU8bQL0
+R2
+R0
+R8
+8/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/CC_DECODER.v
+F/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/CC_DECODER.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/CC_DECODER.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl|/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/CC_DECODER.v|
+!i113 1
+R6
+R9
+R7
+n@c@c_@d@e@c@o@d@e@r
+vCC_MUXX
+R1
+!i10b 1
+!s100 TVE[IhabCR6UkEQ;QPSd[1
+I[lE8zYeo3l?ETDZ>IhBK;1
+R2
+R0
+R8
+8/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/CC_MUXX.v
+F/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/CC_MUXX.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/CC_MUXX.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl|/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/CC_MUXX.v|
+!i113 1
+R6
+R9
+R7
+n@c@c_@m@u@x@x
+vSC_RegFIXED
+R1
+!i10b 1
+!s100 Ubaf7_ZD_kM?L@Eb_[@kS3
+INAKdfgMU1;M0QXh^mFl0I1
+R2
+R0
+R8
+8/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/SC_RegFIXED.v
+F/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/SC_RegFIXED.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/SC_RegFIXED.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl|/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/SC_RegFIXED.v|
+!i113 1
+R6
+R9
+R7
+n@s@c_@reg@f@i@x@e@d
+vSC_RegGENERAL
+R1
+!i10b 1
+!s100 Qz;bV]jm6caWJ9VY=Bl=31
+I:UN==KbdDZ;g7aDfYciIL2
+R2
+R0
+R8
+8/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/SC_RegGENERAL.v
+F/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/SC_RegGENERAL.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/SC_RegGENERAL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl|/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/SC_RegGENERAL.v|
+!i113 1
+R6
+R9
+R7
+n@s@c_@reg@g@e@n@e@r@a@l
+vSC_RegSHIFTER
+R1
+!i10b 1
+!s100 NPfbFcM=WR2cZ@1oZ1MQ`1
+IDDDgieGJ5YCNdZPmU]m=T3
+R2
+R0
+R8
+8/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/SC_RegSHIFTER.v
+F/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/SC_RegSHIFTER.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/SC_RegSHIFTER.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl|/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/SC_RegSHIFTER.v|
+!i113 1
+R6
+R9
+R7
+n@s@c_@reg@s@h@i@f@t@e@r
+vSC_STATEMACHINE
+R1
+!i10b 1
+!s100 jD:@GJfffkE6DRjP6YVc]3
+IKHR5WOD86hDi9=1]G4]Kg2
+R2
+R0
+w1519734851
+8/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/SC_STATEMACHINE.v
+F/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/SC_STATEMACHINE.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/SC_STATEMACHINE.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl|/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/SC_STATEMACHINE.v|
+!i113 1
+R6
+R9
+R7
+n@s@c_@s@t@a@t@e@m@a@c@h@i@n@e
+vTB_SYSTEM
+R1
+!i10b 1
+!s100 CGhg]hDk``?[Am9hS^cEk3
+I]Fc]GlVoSSKk9S0]F;V6Y2
+R2
+R0
+w1519152182
+8/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/simulation/modelsim/TB_SYSTEM.vt
+F/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/simulation/modelsim/TB_SYSTEM.vt
+L0 29
+R4
+r1
+!s85 0
+31
+R5
+!s107 /media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/simulation/modelsim/TB_SYSTEM.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/simulation/modelsim|/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/simulation/modelsim/TB_SYSTEM.vt|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/simulation/modelsim
+R7
+n@t@b_@s@y@s@t@e@m
+vuDataPath
+R1
+!i10b 1
+!s100 P_[R<;Sd9T[92X41cD6EO2
+IaI7oLRmmQV2=h5TM]3zLV0
+R2
+R0
+R8
+8/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/uDataPath.v
+F/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/uDataPath.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/uDataPath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl|/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/uDataPath.v|
+!i113 1
+R6
+R9
+R7
+nu@data@path
+vWB_SYSTEM
+R1
+!i10b 1
+!s100 3KGm0MF;X>zYLWjNlnI4c0
+IBocB<kCmlJRoh<R92l:>H3
+R2
+R0
+R8
+8/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/WB_SYSTEM.v
+F/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/WB_SYSTEM.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/WB_SYSTEM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl|/media/fsegura/FES-INFO/Dropbox/work/de0nano/0DATAPATH/PRJ0_uDataPath_1/rtl/WB_SYSTEM.v|
+!i113 1
+R6
+R9
+R7
+n@w@b_@s@y@s@t@e@m
